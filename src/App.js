@@ -1,26 +1,32 @@
-import React, { Component } from 'react';
-import MemoryCard from './MemoryCard.js';
-import './App.css';
+import React, {Component } from 'react'; 
+import {Link, Route} from 'react-router-dom';
+import MemoryGame from './MemoryGame.js';
+import Jobs from './Jobs.js';
+
+
+
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Memory Game</h1>
-          <p id = "subtitle"> "Match cards to win!"</p>
-        </header>
-        {[1, 2, 3, 4].map(item => (
-          <div className ={`row${item}`}>
-            <MemoryCard /> 
-            <MemoryCard /> 
-            <MemoryCard /> 
-            <MemoryCard /> 
-          </div>  
-        ))}
-      </div>
-    );
-  }
+    render() {
+        return (
+
+        <div>
+            <div className= "navbar">
+            <Link to = "/memory"> Memory Game </Link>
+            <Link to = "/jobs"> Jobs </Link>
+            </div>
+
+            <Route path = "/memory" 
+                   component = {MemoryGame}/>
+            <Route path ="/jobs"
+                   component =  {Jobs}/>
+
+        </div>
+        )
+    }
 }
 
-export default App;
+export default App; 
+
+
+

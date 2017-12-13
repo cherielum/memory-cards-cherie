@@ -1,28 +1,18 @@
-.App {
-  text-align: center;
+.navbar {
+    background-color: #222;
+    text-align: center; 
+    padding: 20px; 
 }
 
-.App-header {
-  background-color: #222;
-  height: 80px;
-  padding: 20px;
-  color: white;
+.navbar a{
+    color: white; 
+    margin: 5px; 
 }
 
-.App-title {
-  font-size: 1.5em;
+.navbar a:hover {
+    color: orange; 
 }
 
-#subtitle{
-  font-size: 1em; 
-  color: #666666;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.navbar a:active{
+    color: red; 
 }
